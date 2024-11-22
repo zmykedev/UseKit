@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Compatibilidad con navegadores modernos y Node.js
+    "module": "ESNext", // Usar módulos ES para mejor interoperabilidad
+    "lib": ["DOM", "ES2020"], // Soporte para APIs del navegador y ES2020
+    "jsx": "react-jsx", // Configuración para el nuevo transformador JSX
+    "declaration": true, // Generar archivos .d.ts para typings
+    "declarationMap": true, // Crear mapas de origen para archivos de declaración
+    "sourceMap": true, // Crear mapas de origen para depuración
+    "moduleResolution": "node", // Resolución de módulos estilo Node.js
+    "esModuleInterop": true, // Soporte para módulos CommonJS/ESM
+    "forceConsistentCasingInFileNames": true, // Enforce casing consistency
+    "strict": true, // Activar todas las verificaciones estrictas de TypeScript
+    "skipLibCheck": true, // Omitir comprobaciones de tipos en archivos de biblioteca
+    "outDir": "./dist", // Directorio de salida para los archivos compilados
+    "rootDir": "./src" // Directorio raíz de entrada
+  },
+  "include": ["src"], // Directorios o archivos incluidos en la compilación
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx", "dist"] // Archivos excluidos
+}

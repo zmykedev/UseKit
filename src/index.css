@@ -1,0 +1,43 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Design tokens - Colors */
+    --color-primary: #646cff;
+    --color-primary-hover: #535bf2;
+    --color-background: #242424;
+    --color-background-light: #ffffff;
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-text-light: #213547;
+
+    /* Design tokens - Typography */
+    --font-family-base: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --line-height-base: 1.5;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium 
+    transition-colors duration-250 cursor-pointer;
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+  }
+
+  .btn:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+/* Dark/Light mode preferences */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: var(--color-background-light);
+    --color-text: var(--color-text-light);
+  }
+}
